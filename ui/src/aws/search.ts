@@ -64,7 +64,7 @@ function searchResources(query: string): Resource[] {
     if (response.length > 0) {
         const docs = response[0].result;
         console.log('Found', docs.length, 'results for ', query);
-        return docs.map((id) => {
+        return docs.map((id: number) => {
             // @ts-ignore
             return resources[id];
         });
